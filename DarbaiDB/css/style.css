@@ -1,0 +1,115 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 24px;
+    background: #f2f2f2;
+    color: #222;
+    font-family: Arial, sans-serif;
+}
+
+.kortele {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 24px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+}
+
+h1 {
+    margin-top: 0;
+}
+
+.pridejimo-forma {
+    display: grid;
+    gap: 10px;
+    margin-bottom: 24px;
+}
+
+input,
+button {
+    padding: 10px;
+    font: inherit;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+}
+
+input {
+    width: 100%;
+    min-width: 0;
+}
+
+button {
+    background: #e8edf3;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #d7e0eb;
+}
+
+.pridejimo-forma button {
+    justify-self: start;
+}
+
+.darbu-sarasas {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.darbas {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 12px;
+    padding: 14px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.darbo-tekstas {
+    overflow-wrap: anywhere;
+}
+
+.terminas {
+    margin: 8px 0;
+    font-size: 14px;
+}
+
+.paveluotas {
+    background: #fff0f0;
+    border-left: 4px solid #b73737;
+}
+
+.paveluotas span {
+    color: #a32222;
+}
+
+.atliktas {
+    background: #f5f5f5;
+    color: #777;
+}
+
+.atliktas .darbo-tekstas {
+    text-decoration: line-through;
+}
+
+@media (max-width: 520px) {
+    body {
+        padding: 12px;
+    }
+
+    .kortele {
+        padding: 16px;
+    }
+
+    .darbas {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
