@@ -13,6 +13,9 @@
         </nav>
     </header>
     <main class="mx-auto w-full max-w-2xl flex-1 px-4 py-8">
+        @if (session('success'))
+            <p role="status" class="mb-6 rounded-lg border border-blue-200 bg-blue-50 p-4 text-blue-800">{{ session('success') }}</p>
+        @endif
         {{ $slot }}
     </main>
     <x-footer />
