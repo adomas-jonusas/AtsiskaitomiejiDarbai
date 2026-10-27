@@ -11,10 +11,18 @@
                 <time datetime="{{ $chirp->created_at->toIso8601String() }}" title="{{ $chirp->created_at->format('Y-m-d H:i') }}" class="text-xs text-slate-500">
                     {{ $chirp->created_at->diffForHumans() }}
                 </time>
+                @if ($chirp->updated_at->gt($chirp->created_at->copy()->addSeconds(5)))
+                    <span class="text-xs italic text-slate-500">redaguota</span>
+                @endif
             </div>
             <p class="mt-2 whitespace-pre-wrap break-words">{{ $chirp->message }}</p>
             <div class="mt-4 flex flex-wrap gap-2">
                 <a href="{{ route('chirps.edit', $chirp) }}" class="btn btn-secondary">Redaguoti</a>
+                <form method="POST" action="{{ route('chirps.destroy', $chirp) }}" onsubmit="return confirm('Ar tikrai ištrinti šią žinutę?')">
+                    @csrf
+                    @method('DELETE')
+                    <button type="submit" class="btn btn-secondary text-red-700">Ištrinti</button>
+                </form>
             </div>
         </div>
     </div>

@@ -37,4 +37,11 @@ class ChirpController extends Controller
 
         return to_route('home')->with('success', 'Žinutė atnaujinta!');
     }
+
+    public function destroy(Chirp $chirp): RedirectResponse
+    {
+        $chirp->delete();
+
+        return to_route('home')->with('success', 'Žinutė ištrinta!');
+    }
 }
