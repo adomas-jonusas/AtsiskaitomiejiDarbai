@@ -9,6 +9,11 @@
 .env
 .env.backup
 .env.production
+.env.*
+!.env.example
+*.log
+*.pem
+*.key
 .phpactor.json
 .phpunit.result.cache
 Homestead.json
