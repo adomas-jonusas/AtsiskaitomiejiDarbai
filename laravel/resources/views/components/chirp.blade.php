@@ -16,14 +16,16 @@
                 @endif
             </div>
             <p class="mt-2 whitespace-pre-wrap break-words">{{ $chirp->message }}</p>
-            <div class="mt-4 flex flex-wrap gap-2">
+            @can('update', $chirp)
+                <div class="mt-4 flex flex-wrap gap-2">
                 <a href="{{ route('chirps.edit', $chirp) }}" class="btn btn-secondary">Redaguoti</a>
                 <form method="POST" action="{{ route('chirps.destroy', $chirp) }}" onsubmit="return confirm('Ar tikrai ištrinti šią žinutę?')">
                     @csrf
                     @method('DELETE')
                     <button type="submit" class="btn btn-secondary text-red-700">Ištrinti</button>
                 </form>
-            </div>
+                </div>
+            @endcan
         </div>
     </div>
 </article>

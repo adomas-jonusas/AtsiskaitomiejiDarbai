@@ -3,12 +3,15 @@
 namespace App\Http\Controllers;
 
 use App\Models\Chirp;
+use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
 
 class ChirpController extends Controller
 {
+    use AuthorizesRequests;
+
     public function index(): View
     {
         $chirps = Chirp::with('user')->latest()->latest('id')->take(50)->get();
@@ -20,18 +23,22 @@ class ChirpController extends Controller
     {
         $validated = $request->validate(['message' => ['required', 'string', 'max:255']]);
 
-        Chirp::create($validated);
+        $request->user()->chirps()->create($validated);
 
         return to_route('home')->with('success', 'Žinutė paskelbta!');
     }
 
     public function edit(Chirp $chirp): View
     {
+        $this->authorize('update', $chirp);
+
         return view('chirps.edit', ['chirp' => $chirp]);
     }
 
     public function update(Request $request, Chirp $chirp): RedirectResponse
     {
+        $this->authorize('update', $chirp);
+
         $validated = $request->validate(['message' => ['required', 'string', 'max:255']]);
         $chirp->update($validated);
 
@@ -40,6 +47,8 @@ class ChirpController extends Controller
 
     public function destroy(Chirp $chirp): RedirectResponse
     {
+        $this->authorize('delete', $chirp);
+
         $chirp->delete();
 
         return to_route('home')->with('success', 'Žinutė ištrinta!');
