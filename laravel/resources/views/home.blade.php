@@ -5,9 +5,10 @@
     <form method="POST" action="{{ route('chirps.store') }}" class="mt-6 rounded-xl border border-slate-200 bg-white p-5">
         @csrf
         <label for="message" class="font-semibold">Kuo nori pasidalinti?</label>
-        <textarea id="message" name="message" rows="4" maxlength="255" required class="field" placeholder="Parašyk trumpą žinutę..."></textarea>
+        <textarea id="message" name="message" rows="4" maxlength="255" required class="field" aria-describedby="message-help message-error" placeholder="Parašyk trumpą žinutę...">{{ old('message') }}</textarea>
+        <p id="message-error" class="mt-2 text-sm text-red-700">@error('message') {{ $message }} @enderror</p>
         <div class="mt-4 flex flex-wrap items-center justify-between gap-3">
-            <p class="text-xs text-slate-500">Iki 255 simbolių.</p>
+            <p id="message-help" class="text-xs text-slate-500">Iki 255 simbolių.</p>
             <button type="submit" class="btn">Skelbti</button>
         </div>
     </form>
