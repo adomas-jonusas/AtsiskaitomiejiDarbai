@@ -10,6 +10,13 @@
     <header class="border-b border-blue-100 bg-white">
         <nav aria-label="Pagrindinė navigacija" class="mx-auto flex max-w-4xl flex-wrap items-center justify-between gap-4 px-4 py-5">
             <a href="{{ route('home') }}" class="text-xl font-bold text-blue-700">{{ config('app.name') }}</a>
+            <div class="flex flex-wrap items-center gap-3">
+                @auth
+                    <span class="break-all text-sm text-slate-600">{{ auth()->user()->name }}</span>
+                @else
+                    <a href="{{ route('register') }}" class="btn">Registruotis</a>
+                @endauth
+            </div>
         </nav>
     </header>
     <main class="mx-auto w-full max-w-2xl flex-1 px-4 py-8">
