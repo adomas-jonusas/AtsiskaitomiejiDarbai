@@ -2,13 +2,11 @@
     <section class="rounded-xl border border-slate-200 bg-white p-6">
         <h1 class="text-3xl font-bold">Žinučių srautas</h1>
     </section>
-    @forelse ($chirps as $chirp)
-        <article class="mt-4 rounded-xl border border-slate-200 bg-white p-6">
-            <h2 class="font-semibold">{{ $chirp->user?->name ?? 'Anonimas' }}</h2>
-            <p class="mt-2">{{ $chirp->message }}</p>
-            <p class="mt-2 text-sm text-slate-500">{{ $chirp->created_at->diffForHumans() }}</p>
-        </article>
-    @empty
-        <p class="mt-6 text-slate-600">Žinučių dar nėra. Parašyk pirmąją!</p>
-    @endforelse
+    <div class="mt-6 space-y-4">
+        @forelse ($chirps as $chirp)
+            <x-chirp :chirp="$chirp" />
+        @empty
+            <p class="rounded-xl border border-dashed border-blue-200 p-8 text-center text-slate-600">Žinučių dar nėra. Parašyk pirmąją!</p>
+        @endforelse
+    </div>
 </x-layout>
