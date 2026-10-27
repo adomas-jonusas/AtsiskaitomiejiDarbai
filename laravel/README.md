@@ -1,6 +1,7 @@
 # Chirper – Adomas Jonušas
 
-Autorius: Adomas Jonušas  
+Autorius: Adomas Jonušas
+
 Klasė: 3PHP-1
 
 Mokomasis trumpos žinutės programos projektas pagal [oficialų Laravel kursą](https://laravel.com/learn/getting-started-with-laravel).
