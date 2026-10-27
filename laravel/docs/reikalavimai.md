@@ -2,7 +2,7 @@
 
 Projektas kuriamas pagal 13 kurso pamokų eilę. Kiekvienos pamokos pakeitimai ir patikros užfiksuojami tikrais Git commit'ais.
 
-Pabaigoje patikrinsiu:
+Įgyvendinta ir patikrinta:
 
 - Viešą žinučių srautą, autorių ir sukūrimo laiką.
 - Registraciją, prisijungimą, atsijungimą ir saugų slaptažodžio saugojimą.
@@ -13,3 +13,5 @@ Pabaigoje patikrinsiu:
 - Ignoruojamus privačius bei generuojamus failus ir tikrą GitHub istoriją.
 
 Pagal mokytojo pakeitimą 4 pamokoje programa nebus publikuojama internete. Vietoje to bus paruoštas vietinis paleidimas ir GitHub saugomas šaltinio kodas. Kiti saugyklos darbai nekeičiami.
+
+Abiejų galutinių patikrinimų rezultatai pateikti [patikra.md](patikra.md).
