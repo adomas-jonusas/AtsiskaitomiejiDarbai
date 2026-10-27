@@ -1,9 +1,9 @@
 <?php
 
-use App\Http\Controllers\ChirpController;
-use App\Http\Controllers\Auth\Register;
 use App\Http\Controllers\Auth\Login;
 use App\Http\Controllers\Auth\Logout;
+use App\Http\Controllers\Auth\Register;
+use App\Http\Controllers\ChirpController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [ChirpController::class, 'index'])->name('home');
