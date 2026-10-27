@@ -14,6 +14,7 @@
                 @auth
                     <span class="break-all text-sm text-slate-600">{{ auth()->user()->name }}</span>
                 @else
+                    <a href="{{ route('login') }}" class="btn btn-secondary">Prisijungti</a>
                     <a href="{{ route('register') }}" class="btn">Registruotis</a>
                 @endauth
             </div>

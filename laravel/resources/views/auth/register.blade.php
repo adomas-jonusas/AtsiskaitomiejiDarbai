@@ -27,5 +27,6 @@
             </div>
             <button type="submit" class="btn w-full">Registruotis</button>
         </form>
+        <p class="mt-6 text-sm text-slate-600">Jau turi paskyrą? <a href="{{ route('login') }}" class="font-semibold text-blue-700 underline">Prisijunk</a></p>
     </section>
 </x-layout>

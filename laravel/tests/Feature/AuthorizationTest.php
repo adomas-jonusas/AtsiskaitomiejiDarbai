@@ -16,10 +16,10 @@ class AuthorizationTest extends TestCase
         $owner = User::factory()->create();
         $chirp = $owner->chirps()->create(['message' => 'Saugoma žinutė']);
 
-        $this->post('/chirps', ['message' => 'Nauja'])->assertRedirect('/register');
-        $this->get('/chirps/'.$chirp->id.'/edit')->assertRedirect('/register');
-        $this->put('/chirps/'.$chirp->id, ['message' => 'Pakeista'])->assertRedirect('/register');
-        $this->delete('/chirps/'.$chirp->id)->assertRedirect('/register');
+        $this->post('/chirps', ['message' => 'Nauja'])->assertRedirect('/login');
+        $this->get('/chirps/'.$chirp->id.'/edit')->assertRedirect('/login');
+        $this->put('/chirps/'.$chirp->id, ['message' => 'Pakeista'])->assertRedirect('/login');
+        $this->delete('/chirps/'.$chirp->id)->assertRedirect('/login');
         $this->assertDatabaseCount('chirps', 1);
         $this->assertDatabaseHas('chirps', ['id' => $chirp->id, 'message' => 'Saugoma žinutė']);
     }
