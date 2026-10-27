@@ -13,6 +13,9 @@
                 </time>
             </div>
             <p class="mt-2 whitespace-pre-wrap break-words">{{ $chirp->message }}</p>
+            <div class="mt-4 flex flex-wrap gap-2">
+                <a href="{{ route('chirps.edit', $chirp) }}" class="btn btn-secondary">Redaguoti</a>
+            </div>
         </div>
     </div>
 </article>
