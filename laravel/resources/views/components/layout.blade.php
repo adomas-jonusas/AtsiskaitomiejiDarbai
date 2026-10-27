@@ -13,6 +13,10 @@
             <div class="flex flex-wrap items-center gap-3">
                 @auth
                     <span class="break-all text-sm text-slate-600">{{ auth()->user()->name }}</span>
+                    <form method="POST" action="{{ route('logout') }}">
+                        @csrf
+                        <button type="submit" class="btn btn-secondary">Atsijungti</button>
+                    </form>
                 @else
                     <a href="{{ route('login') }}" class="btn btn-secondary">Prisijungti</a>
                     <a href="{{ route('register') }}" class="btn">Registruotis</a>

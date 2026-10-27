@@ -5,6 +5,9 @@
     <form method="POST" action="{{ route('chirps.store') }}" class="mt-6 rounded-xl border border-slate-200 bg-white p-5">
         @csrf
         <label for="message" class="font-semibold">Kuo nori pasidalinti?</label>
+        @guest
+            <p class="mt-2 text-sm text-slate-600">Norėdamas skelbti žinutes, <a href="{{ route('login') }}" class="text-blue-700 underline">prisijunk</a> arba <a href="{{ route('register') }}" class="text-blue-700 underline">registruokis</a>.</p>
+        @endguest
         <textarea id="message" name="message" rows="4" maxlength="255" required class="field" aria-describedby="message-help message-error" placeholder="Parašyk trumpą žinutę...">{{ old('message') }}</textarea>
         <p id="message-error" class="mt-2 text-sm text-red-700">@error('message') {{ $message }} @enderror</p>
         <div class="mt-4 flex flex-wrap items-center justify-between gap-3">
