@@ -1,0 +1,61 @@
+erDiagram
+    kalbos o|--o{ filmai : kalba
+    valstybes o|--o{ filmai : valstybe
+    filmai ||--o{ filmu_rezisieriai : turi
+    asmenys ||--o{ filmu_rezisieriai : rezisuoja
+    filmai ||--o{ vaidmenys : turi
+    asmenys ||--o{ vaidmenys : vaidina
+    filmai ||--o{ filmu_zanrai : priskirtas
+    zanrai ||--o{ filmu_zanrai : apibudina
+    filmai ||--o{ ivertinimai : gauna
+    kritikai ||--o{ ivertinimai : vertina
+    kalbos {
+        int kalba_id PK
+        varchar pavadinimas UK
+    }
+    valstybes {
+        int valstybe_id PK
+        varchar kodas UK
+    }
+    filmai {
+        int filmas_id PK
+        varchar pavadinimas
+        smallint metai
+        smallint trukme_min
+        int kalba_id FK "NULL leidziamas"
+        date premjera "NULL leidziamas"
+        int valstybe_id FK "NULL leidziamas"
+    }
+    asmenys {
+        int asmuo_id PK
+        varchar vardas_pavarde
+        char lytis "NULL leidziamas"
+    }
+    filmu_rezisieriai {
+        int filmas_id PK,FK
+        int asmuo_id PK,FK
+    }
+    vaidmenys {
+        int filmas_id PK,FK
+        int asmuo_id PK,FK
+        varchar personazas PK
+    }
+    zanrai {
+        int zanras_id PK
+        varchar pavadinimas UK
+    }
+    filmu_zanrai {
+        int filmas_id PK,FK
+        int zanras_id PK,FK
+    }
+    kritikai {
+        int kritikas_id PK
+        varchar vardas "NULL leidziamas"
+        varchar pavarde "NULL leidziamas"
+        boolean anoniminis
+    }
+    ivertinimai {
+        int filmas_id PK,FK
+        int kritikas_id PK,FK
+        decimal zvaigzdutes "0 iki 10"
+    }

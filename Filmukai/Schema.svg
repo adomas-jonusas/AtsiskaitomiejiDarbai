@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1720" height="1120" viewBox="0 0 1720 1120" role="img" aria-labelledby="title desc">
+<title id="title">FILMUKAI duomenų bazės schema</title>
+<desc id="desc">Dešimt lentelių su pirminiais, išoriniais raktais ir ryšių kardinalumais. Aktoriai ir režisieriai saugomi bendroje asmenų lentelėje.</desc>
+<rect width="1720" height="1120" fill="#f8fafc"/>
+<text x="40" y="64" font-family="Arial, sans-serif" font-size="36" fill="#172b4d" font-weight="700">FILMUKAI · Duomenų bazės schema</text>
+<text x="40" y="102" font-family="Arial, sans-serif" font-size="20" fill="#172b4d" font-weight="400">10 lentelių  |  PK – pirminis raktas  |  FK – išorinis raktas  |  UK – unikalus laukas</text>
+<polyline points="300,260 380,260 380,290 480,290" fill="none" stroke="#64748b" stroke-width="3"/>
+<text x="310" y="248" font-family="Arial, sans-serif" font-size="17" fill="#172b4d" font-weight="400">0..1</text>
+<text x="417" y="277" font-family="Arial, sans-serif" font-size="17" fill="#172b4d" font-weight="400">0..N</text>
+<polyline points="300,450 480,450" fill="none" stroke="#64748b" stroke-width="3"/>
+<text x="310" y="438" font-family="Arial, sans-serif" font-size="17" fill="#172b4d" font-weight="400">0..1</text>
+<text x="418" y="438" font-family="Arial, sans-serif" font-size="17" fill="#172b4d" font-weight="400">0..N</text>
+<polyline points="300,740 480,740" fill="none" stroke="#64748b" stroke-width="3"/>
+<text x="311" y="728" font-family="Arial, sans-serif" font-size="17" fill="#172b4d" font-weight="400">1</text>
+<text x="417" y="728" font-family="Arial, sans-serif" font-size="17" fill="#172b4d" font-weight="400">0..N</text>
+<polyline points="630,506 630,680" fill="none" stroke="#64748b" stroke-width="3"/>
+<text x="645" y="540" font-family="Arial, sans-serif" font-size="17" fill="#172b4d" font-weight="400">1</text>
+<text x="645" y="661" font-family="Arial, sans-serif" font-size="17" fill="#172b4d" font-weight="400">0..N</text>
+<polyline points="780,250 870,250 870,190 970,190" fill="none" stroke="#64748b" stroke-width="3"/>
+<text x="796" y="236" font-family="Arial, sans-serif" font-size="17" fill="#172b4d" font-weight="400">1</text>
+<text x="909" y="177" font-family="Arial, sans-serif" font-size="17" fill="#172b4d" font-weight="400">0..N</text>
+<polyline points="780,365 970,365" fill="none" stroke="#64748b" stroke-width="3"/>
+<text x="796" y="352" font-family="Arial, sans-serif" font-size="17" fill="#172b4d" font-weight="400">1</text>
+<text x="909" y="352" font-family="Arial, sans-serif" font-size="17" fill="#172b4d" font-weight="400">0..N</text>
+<polyline points="780,470 870,470 870,740 970,740" fill="none" stroke="#64748b" stroke-width="3"/>
+<text x="796" y="457" font-family="Arial, sans-serif" font-size="17" fill="#172b4d" font-weight="400">1</text>
+<text x="909" y="727" font-family="Arial, sans-serif" font-size="17" fill="#172b4d" font-weight="400">0..N</text>
+<polyline points="1260,190 1305,190 1305,270 1360,270" fill="none" stroke="#64748b" stroke-width="3"/>
+<text x="1267" y="177" font-family="Arial, sans-serif" font-size="17" fill="#172b4d" font-weight="400">0..N</text>
+<text x="1332" y="257" font-family="Arial, sans-serif" font-size="17" fill="#172b4d" font-weight="400">1</text>
+<polyline points="1260,395 1315,395 1315,335 1360,335" fill="none" stroke="#64748b" stroke-width="3"/>
+<text x="1267" y="427" font-family="Arial, sans-serif" font-size="17" fill="#172b4d" font-weight="400">0..N</text>
+<text x="1332" y="322" font-family="Arial, sans-serif" font-size="17" fill="#172b4d" font-weight="400">1</text>
+<polyline points="1260,740 1360,740" fill="none" stroke="#64748b" stroke-width="3"/>
+<text x="1268" y="727" font-family="Arial, sans-serif" font-size="17" fill="#172b4d" font-weight="400">0..N</text>
+<text x="1332" y="727" font-family="Arial, sans-serif" font-size="17" fill="#172b4d" font-weight="400">1</text>
+<rect x="40" y="195" width="260" height="126" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<rect x="40" y="195" width="260" height="46" fill="#183b56" stroke="#183b56" stroke-width="2"/>
+<text x="56" y="226" font-family="Arial, sans-serif" font-size="22" fill="#ffffff" font-weight="700">kalbos</text>
+<text x="56" y="272" font-family="Arial, sans-serif" font-size="19" fill="#172b4d" font-weight="400">PK kalba_id</text>
+<text x="56" y="304" font-family="Arial, sans-serif" font-size="19" fill="#172b4d" font-weight="400">UK pavadinimas</text>
+<rect x="40" y="385" width="260" height="126" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<rect x="40" y="385" width="260" height="46" fill="#183b56" stroke="#183b56" stroke-width="2"/>
+<text x="56" y="416" font-family="Arial, sans-serif" font-size="22" fill="#ffffff" font-weight="700">valstybes</text>
+<text x="56" y="462" font-family="Arial, sans-serif" font-size="19" fill="#172b4d" font-weight="400">PK valstybe_id</text>
+<text x="56" y="494" font-family="Arial, sans-serif" font-size="19" fill="#172b4d" font-weight="400">UK kodas</text>
+<rect x="40" y="675" width="260" height="126" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<rect x="40" y="675" width="260" height="46" fill="#183b56" stroke="#183b56" stroke-width="2"/>
+<text x="56" y="706" font-family="Arial, sans-serif" font-size="22" fill="#ffffff" font-weight="700">zanrai</text>
+<text x="56" y="752" font-family="Arial, sans-serif" font-size="19" fill="#172b4d" font-weight="400">PK zanras_id</text>
+<text x="56" y="784" font-family="Arial, sans-serif" font-size="19" fill="#172b4d" font-weight="400">UK pavadinimas</text>
+<rect x="480" y="220" width="300" height="286" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<rect x="480" y="220" width="300" height="46" fill="#183b56" stroke="#183b56" stroke-width="2"/>
+<text x="496" y="251" font-family="Arial, sans-serif" font-size="22" fill="#ffffff" font-weight="700">filmai</text>
+<text x="496" y="297" font-family="Arial, sans-serif" font-size="19" fill="#172b4d" font-weight="400">PK filmas_id</text>
+<text x="496" y="329" font-family="Arial, sans-serif" font-size="19" fill="#172b4d" font-weight="400">pavadinimas</text>
+<text x="496" y="361" font-family="Arial, sans-serif" font-size="19" fill="#172b4d" font-weight="400">metai</text>
+<text x="496" y="393" font-family="Arial, sans-serif" font-size="19" fill="#172b4d" font-weight="400">trukme_min</text>
+<text x="496" y="425" font-family="Arial, sans-serif" font-size="19" fill="#172b4d" font-weight="400">FK kalba_id (NULL)</text>
+<text x="496" y="457" font-family="Arial, sans-serif" font-size="19" fill="#172b4d" font-weight="400">premjera (NULL)</text>
+<text x="496" y="489" font-family="Arial, sans-serif" font-size="19" fill="#172b4d" font-weight="400">FK valstybe_id (NULL)</text>
+<rect x="480" y="680" width="300" height="126" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<rect x="480" y="680" width="300" height="46" fill="#183b56" stroke="#183b56" stroke-width="2"/>
+<text x="496" y="711" font-family="Arial, sans-serif" font-size="22" fill="#ffffff" font-weight="700">filmu_zanrai</text>
+<text x="496" y="757" font-family="Arial, sans-serif" font-size="19" fill="#172b4d" font-weight="400">PK, FK filmas_id</text>
+<text x="496" y="789" font-family="Arial, sans-serif" font-size="19" fill="#172b4d" font-weight="400">PK, FK zanras_id</text>
+<rect x="970" y="130" width="290" height="126" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<rect x="970" y="130" width="290" height="46" fill="#183b56" stroke="#183b56" stroke-width="2"/>
+<text x="986" y="161" font-family="Arial, sans-serif" font-size="22" fill="#ffffff" font-weight="700">filmu_rezisieriai</text>
+<text x="986" y="207" font-family="Arial, sans-serif" font-size="19" fill="#172b4d" font-weight="400">PK, FK filmas_id</text>
+<text x="986" y="239" font-family="Arial, sans-serif" font-size="19" fill="#172b4d" font-weight="400">PK, FK asmuo_id</text>
+<rect x="970" y="320" width="290" height="158" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<rect x="970" y="320" width="290" height="46" fill="#183b56" stroke="#183b56" stroke-width="2"/>
+<text x="986" y="351" font-family="Arial, sans-serif" font-size="22" fill="#ffffff" font-weight="700">vaidmenys</text>
+<text x="986" y="397" font-family="Arial, sans-serif" font-size="19" fill="#172b4d" font-weight="400">PK, FK filmas_id</text>
+<text x="986" y="429" font-family="Arial, sans-serif" font-size="19" fill="#172b4d" font-weight="400">PK, FK asmuo_id</text>
+<text x="986" y="461" font-family="Arial, sans-serif" font-size="19" fill="#172b4d" font-weight="400">PK personazas</text>
+<rect x="970" y="680" width="290" height="158" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<rect x="970" y="680" width="290" height="46" fill="#183b56" stroke="#183b56" stroke-width="2"/>
+<text x="986" y="711" font-family="Arial, sans-serif" font-size="22" fill="#ffffff" font-weight="700">ivertinimai</text>
+<text x="986" y="757" font-family="Arial, sans-serif" font-size="19" fill="#172b4d" font-weight="400">PK, FK filmas_id</text>
+<text x="986" y="789" font-family="Arial, sans-serif" font-size="19" fill="#172b4d" font-weight="400">PK, FK kritikas_id</text>
+<text x="986" y="821" font-family="Arial, sans-serif" font-size="19" fill="#172b4d" font-weight="400">zvaigzdutes (0–10)</text>
+<rect x="1360" y="225" width="310" height="158" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<rect x="1360" y="225" width="310" height="46" fill="#183b56" stroke="#183b56" stroke-width="2"/>
+<text x="1376" y="256" font-family="Arial, sans-serif" font-size="22" fill="#ffffff" font-weight="700">asmenys</text>
+<text x="1376" y="302" font-family="Arial, sans-serif" font-size="19" fill="#172b4d" font-weight="400">PK asmuo_id</text>
+<text x="1376" y="334" font-family="Arial, sans-serif" font-size="19" fill="#172b4d" font-weight="400">vardas_pavarde</text>
+<text x="1376" y="366" font-family="Arial, sans-serif" font-size="19" fill="#172b4d" font-weight="400">lytis (NULL)</text>
+<rect x="1360" y="680" width="310" height="190" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<rect x="1360" y="680" width="310" height="46" fill="#183b56" stroke="#183b56" stroke-width="2"/>
+<text x="1376" y="711" font-family="Arial, sans-serif" font-size="22" fill="#ffffff" font-weight="700">kritikai</text>
+<text x="1376" y="757" font-family="Arial, sans-serif" font-size="19" fill="#172b4d" font-weight="400">PK kritikas_id</text>
+<text x="1376" y="789" font-family="Arial, sans-serif" font-size="19" fill="#172b4d" font-weight="400">vardas (NULL)</text>
+<text x="1376" y="821" font-family="Arial, sans-serif" font-size="19" fill="#172b4d" font-weight="400">pavarde (NULL)</text>
+<text x="1376" y="853" font-family="Arial, sans-serif" font-size="19" fill="#172b4d" font-weight="400">anoniminis</text>
+<polyline points="40,925 1670,925" fill="none" stroke="#cbd5e1" stroke-width="3"/>
+<text x="40" y="972" font-family="Arial, sans-serif" font-size="22" fill="#172b4d" font-weight="700">Ryšiai</text>
+<text x="40" y="1008" font-family="Arial, sans-serif" font-size="20" fill="#172b4d" font-weight="400">1 – vienas įrašas; 0..1 – neprivalomas vienas; 0..N – nulis arba daug įrašų.</text>
+<text x="40" y="1042" font-family="Arial, sans-serif" font-size="20" fill="#172b4d" font-weight="400">Keli PK vienoje lentelėje sudaro bendrą raktą. Ne NULL išorinis raktas nurodo esamą tėvinį įrašą.</text>
+<text x="40" y="1076" font-family="Arial, sans-serif" font-size="20" fill="#172b4d" font-weight="400">Rodinys filmu_vidurkiai apskaičiuoja AVG(zvaigzdutes) ir COUNT(*) kiekvienam filmas_id.</text>
+</svg>
